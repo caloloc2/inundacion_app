@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/valor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="13dp"
+    android:paddingLeft="18dp"
+    android:text="12.50"
+    android:textAllCaps="true"
+    android:textColor="@color/colorAccent"
+    android:textSize="24sp"
+    android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/fecha_hora"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/valor"
+    android:paddingLeft="18dp"
+    android:paddingTop="1dp"
+    android:text="2018-05-02 a las 05:00"
+    android:textSize="12sp"
+    android:textStyle="italic"
+    tools:textColor="@android:color/darker_gray" />
+
+</RelativeLayout>
