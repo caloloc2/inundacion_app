@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,6 +40,7 @@ public class Principal extends AppCompatActivity {
     JSONArray elementos;
 
     String[] valores_lista = {};
+    String[] valores2_lista = {};
     String[] fechas_lista = {};
     String[] horas_lista = {};
 
@@ -104,9 +106,11 @@ public class Principal extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             convertView = getLayoutInflater().inflate(R.layout.items_datos, null);
             TextView valor = (TextView)convertView.findViewById(R.id.valor);
+            TextView valor_2 = (TextView)convertView.findViewById(R.id.valor_2);
             TextView fecha_hora = (TextView)convertView.findViewById(R.id.fecha_hora);
 
-            valor.setText(valores_lista[position]);
+            valor.setText("Nivel de Rio: "+valores_lista[position]);
+            valor_2.setText("Nivel de lluvia: "+valores2_lista[position]);
             fecha_hora.setText(fechas_lista[position]+" a las "+horas_lista[position]);
 
             return convertView;
@@ -149,7 +153,7 @@ public class Principal extends AppCompatActivity {
     }
 
     public void Abrir_Web(){
-        Uri uriUrl = Uri.parse("http://inundaciones.ddns.net");
+        Uri uriUrl = Uri.parse("http://inundaciones.nibemi.com");
         Intent intent = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(intent);
     }
@@ -182,6 +186,7 @@ public class Principal extends AppCompatActivity {
         listado_items.setAdapter(null);
 
         valores_lista =  new String[0];
+        valores2_lista =  new String[0];
         fechas_lista =  new String[0];
         horas_lista =  new String[0];
 
@@ -204,9 +209,8 @@ public class Principal extends AppCompatActivity {
                                     String fecha = jsonobject.getString("fecha");
                                     String hora = jsonobject.getString("hora");
 
-                                    String valores_juntos = valor +" - "+valor2;
-
-                                    valores_lista = add(valores_lista, valores_juntos);
+                                    valores_lista = add(valores_lista, valor);
+                                    valores2_lista = add(valores2_lista, valor2);
                                     fechas_lista = add(fechas_lista, fecha);
                                     horas_lista = add(horas_lista, hora);
                                 }
