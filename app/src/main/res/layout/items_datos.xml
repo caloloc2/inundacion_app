@@ -4,35 +4,35 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
-<TextView
-    android:id="@+id/valor"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginStart="0dp"
-    android:layout_marginTop="10dp"
-    android:paddingLeft="18dp"
-    android:text="12.50"
-    android:textAllCaps="true"
-    android:textColor="@color/colorAccent"
-    android:textSize="24sp"
-    android:textStyle="bold" />
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="18dp"
+        android:text="12.50"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-<TextView
-    android:id="@+id/valor_2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/valor"
-    android:layout_alignParentStart="true"
-    android:layout_marginStart="1dp"
-    android:layout_marginTop="5dp"
-    android:paddingLeft="18dp"
-    android:text="12.50"
-    android:textAllCaps="true"
-    android:textColor="@color/colorAccent"
-    android:textSize="24sp"
-    android:textStyle="bold" />
+    <TextView
+        android:id="@+id/valor_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valor"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="18dp"
+        android:text="12.50"
+        android:textAllCaps="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/fecha_hora"
